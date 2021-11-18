@@ -1,0 +1,52 @@
+dubbo:
+  config-center:
+    protocol: nacos
+    address: 127.0.0.1:8848
+    data-id: "helloworld"
+    group: basic
+    username: nacos
+    password: nacos
+# nacos里面配置
+# dubbo:
+#   config-center:
+#     protocol: nacos
+#     address: 127.0.0.1:8848
+#     data-id: "helloworld"
+#     group: basic
+#     username: nacos
+#     password: nacos
+#   application:
+#     name: helloworld
+#     module: local
+#     version: 1.0.0 
+#     owner: helloworld
+#     organization: helloworld
+#     metadata-type: local
+#   metadata-report:
+#     protocol: nacos 
+#     address: 127.0.0.1:8848 
+#     username: nacos
+#     password: nacos
+#     timeout: "3s"
+#     group: "helloworld"
+#   registries:
+#     nacos:
+#       protocol: nacos
+#       timeout: 3s
+#       address: 127.0.0.1:8848
+#       username: nacos
+#       password: nacos
+#   protocols:
+#     triple:
+#       name: tri
+#       port: 20016
+#   provider:
+#     registry-ids: nacos
+#     services:
+#       # you may refer to `Reference()` method defined in `protobuf/triple/helloworld.pb.go`
+#       HelloWorldProvider:
+#         protocol-ids: triple
+#         # interface is for registry
+#         interface: org.helloworld
+#         group: helloworld
+#         version: 1.0.0
