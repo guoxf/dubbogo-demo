@@ -9,7 +9,7 @@ import (
 )
 
 type HelloWorldProvider struct {
-	apipb.UnsafeHelloWorldServer
+	apipb.UnimplementedHelloWorldServer
 }
 
 func (h *HelloWorldProvider) SayHello(ctx context.Context, in *apipb.SayHelloRequest) (*apipb.SayHelloResponse, error) {
